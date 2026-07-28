@@ -1,0 +1,23 @@
+{
+  "dataset": "KIDO (serdarciftci/KIDO)",
+  "task": "binary emotion recognition (happiness vs sadness) from children's drawings",
+  "n_unique_drawings": 10860,
+  "class_balance": {"happiness": 5430, "sadness": 5430},
+  "protocol": "frozen features + linear classifier, dedup, group-split by image identity, 5 seeds",
+  "test_set_size": 1629,
+  "results": {
+    "ResNet-50":       {"accuracy": 0.637, "accuracy_sd": 0.009, "macro_f1": 0.636, "kappa": 0.273},
+    "EfficientNet-B0": {"accuracy": 0.666, "accuracy_sd": 0.006, "macro_f1": 0.666, "kappa": 0.332},
+    "ViT-B/16":        {"accuracy": 0.679, "accuracy_sd": 0.009, "macro_f1": 0.679, "kappa": 0.358}
+  },
+  "significance_mcnemar": {
+    "ViT_vs_ResNet50": {"p": 0.012, "significant": true},
+    "EfficientNet_vs_ResNet50": {"p": 0.108, "significant": false},
+    "ViT_vs_EfficientNet": {"p": 0.415, "significant": false}
+  },
+  "confusion_matrices_seed0_rows_true_sad_happy": {
+    "ResNet-50":       [[526, 289], [294, 520]],
+    "EfficientNet-B0": [[547, 268], [275, 539]],
+    "ViT-B/16":        [[537, 278], [246, 568]]
+  }
+}

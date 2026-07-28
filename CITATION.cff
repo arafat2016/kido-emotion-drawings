@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "Recognising happiness and sadness in children's drawings: a leakage-controlled comparison of transfer-learning architectures on the KIDO dataset"
+authors:
+  - family-names: "[YOUR SURNAME]"
+    given-names: "[YOUR NAME]"
+date-released: 2026-01-01
+license: MIT
